@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ignitra Youth Council</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link rel="stylesheet" href="header-footer.css">
+  <link rel="stylesheet" href="gallery.css">
+
+
+  <style>
+    :root {
+      --bg: #FCFAED;
+      --primary: #E86A33;
+      --secondary: #F28C28;
+      --header: #FCFAED;
+      --subtext: #7A6F55;
+      --text: #1F1F1F;
+      --highlight: #FFE8D0;
+      --font-main: 'Poppins', 'Inter', 'Nunito', sans-serif;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+      @font-face {
+        font-family: Bricolage Grotesque;
+        src: "C:\Users\Saniya Aijaz\OneDrive\Documents\Ignitra\Bricolage_Grotesque,DM_Sans.zip";
+
+      }
+
+    body {
+      font-family: var(--font-main);
+      background-color: #FCFAED;
+      color: var(--text);
+      line-height: 1.6;
+      transition: all 0.3s ease-in-out;
+    }
+    
+    section {
+      padding: 4rem 1.5rem 2rem;
+    }
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh; /* full screen hero */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: url("Assets/Image/Gemini_Generated_Image_cr8elycr8elycr8e.png");
+      background-size: cover;   /* scale image to cover */
+      
+    }
+
+   .hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 50% dark overlay */
+  z-index: 1;
+} 
+    .hero h1 {
+      color: rgb(47, 82, 51);
+      font-size: 1.5rem;
+      max-width: 600px;
+      margin: 0 auto;
+      font-family: "Bricolage Grotesque", sans-serif ;
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 20px;
+      text-shadow: 2px #2f5233 ;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #b4b4b4 ;
+      margin-top: 0.75rem;
+      font-family: "DM Sans", sans-serif;
+    }
+   
+    .hero h1,
+.hero p {
+  text-shadow: 2px 2px 6px #0a190b;
+}
+   /* Container setup */
+.problem-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 80px 10%;
+  background-color: #fdf7f0;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* Problem content - two thirds width */
+.problem-content {
+  flex: 0 0 66.666%; /* Two-thirds of screen */
+  max-width: 66.666%;
+  padding-right: 40px;
+}
+
+/* Headings and paragraph */
+.problem-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff6600;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.problem-content h2:hover {
+  transform: translateX(5px);
+  color: #e65c00;
+}
+
+.problem-content p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Cards container - side by side */
+.stats-cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+}
+
+/* Individual card */
+.card {
+  background-color: #fff;
+  padding: 20px 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 calc(33.333% - 13.33px); /* three cards per row with gap */
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ff6600;
+}
+
+.card p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.card a {
+  color: #ff6600;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.card a:hover {
+  color: #e65c00;
+}
+
+/* CTA button */
+.cta-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #ff6600;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 999px;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  background-color: #F28C28;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media screen and (max-width: 1200px) {
+  .problem-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 0;
+  }
+  
+  .stats-cards {
+    flex-direction: column;
+  }
+  
+  .card {
+    flex: 1 1 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .problem-content h2 {
+    font-size: 2rem;
+  }
+}
+
+
+    .cta-btn {
+      margin-top: 1.5rem;
+      background-color: #f1740f;
+      color: white;
+      border: none;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      border-radius: 999px;
+      cursor: pointer;
+      z-index: 2;
+      transition: all 0.3s ease-in-out;
+    }
+    .cta-btn:hover {
+      background-color: var(--secondary);
+      transform: scale(1.05);
+    }
+    .section-title {
+      color: #2f5233;
+      font-size: 1.75rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      padding-top: 2rem;
+      margin-top: 10%;
+    }
+
+    .testimonial-carousel-wrapper {
+      overflow: hidden;
+      width: 100%;
+     
+    }
+
+    .testimonial-carousel {
+      display: flex;
+      width: max-content;
+      animation: scroll-left 25s linear infinite;
+       
+    }
+
+    .testimonial-carousel div {
+      flex: 0 0 auto;
+      width: 300px;
+      margin: 0 1rem;
+      background: var(--highlight);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      font-size: 0.95rem;
+      color: var(--text);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    @keyframes scroll-left {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+       #applyForm input,
+  #applyForm textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border 0.3s;
+  }
+
+  #applyForm input:focus,
+  #applyForm textarea:focus {
+    border-color: #E86A33;
+     /* your primary accent */
+    outline: none;
+    box-shadow: 0 0 4px rgba(232, 106, 51, 0.3);
+  }
+
+  .error {
+    color: red;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    display: none;
+  }
+
+  .invalid {
+    border-color: red !important;
+  } 
+
+    @media(min-width: 768px) {
+      .hero h1 {
+        font-size: 3rem;
+      }
+      
+    }
+  </style>
+</head>
+<body>
+  
+   <div id="header"> </div>
+
+
+
+  <section class="hero">
+    <h1>Your spark was never missing — just your map.</h1>
+    <p>Join the movement to ignite education and leadership in every youth.</p>
+    <button class="cta-btn" onclick="location.href='roadmap.html'" > Explore Roadmap </button>
+  </section>
+</div>
+
+<section class="problem-section">
+  <div class="problem-content">
+    <h2>The Challenge Students Face</h2>
+    <p>Millions of students in India leave school uncertain about their future. Key statistics highlight the urgency:</p>
+    
+    <div class="stats-cards">
+      <div class="card">
+        <h3>90% of Schools</h3>
+        <p>lack structured counseling 
+          <a href="https://ncert.nic.in/pdf/teacher/Survey_Report.pdf" target="_blank">NCERT, 2019</a>
+        </p>
+      </div>
+      <div class="card">
+        <h3>Less than 50%</h3>
+        <p>of youth are employable in key skills 
+          <a href="https://www.skillreport.in/India-Skills-Report-2024.pdf" target="_blank">India Skills Report, 2024</a>
+        </p>
+      </div>
+      <div class="card">
+        <h3>Lack of Clarity</h3>
+        <p>Students make career decisions without guidance, leading to stress, dropouts, and missed opportunities.</p>
+      </div>
+    </div>
+
+    <p><em>Students don’t lack ambition — they lack direction.</em></p>
+    <a href="#programs" class="cta-button">Why Guidance Matters</a>
+  </div>
+</section>
+
+
+<section class="masonry">
+
+  <div class="gallery"> 
+    <div class="gallery-item"> <img src="Assets/Image/img1.jpeg"   </div>
+    <div class="gallery-item"> <img src="Assets/Image/img2.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img3.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img4.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img5.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img6.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img7.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img8.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img9.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img10.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img11.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img12.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img13.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img14.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img15.jpeg" </div>
+ 
+    <!--duplicate items for infinite scroll-->
+
+    <div class="gallery-item"> <img src="Assets/Image/img1.jpeg"   </div>
+    <div class="gallery-item"> <img src="Assets/Image/img2.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img3.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img4.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img5.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img6.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img7.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img8.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img9.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img10.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img11.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img12.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img13.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img14.jpeg" </div>
+    <div class="gallery-item"> <img src="Assets/Image/img15.jpeg" </div>
+
+
+  </div>
+</section>
+
+<section id="testimonials">
+    <h2 class="section-title">Testimonials</h2>
+    <div class="testimonial-carousel-wrapper">
+      <div class="testimonial-carousel">
+        <!-- Original testimonials -->
+        <div>“Ignitra helped me build confidence and skills.” – Student A</div>
+        <div>“IYC workshops are life-changing.” – Teacher B</div>
+        <div>“I found a community that believes in me.” – Student C</div>
+        <div>“Their roadmaps guided me perfectly!” – Student D</div>
+        <div>“Workshops were super fun and insightful.” – Student E</div>
+
+        <!-- Duplicate set for seamless looping -->
+        <div>“Ignitra helped me build confidence and skills.” – Student A</div>
+        <div>“IYC workshops are life-changing.” – Teacher B</div>
+        <div>“I found a community that believes in me.” – Student C</div>
+        <div>“Their roadmaps guided me perfectly!” – Student D</div>
+        <div>“Workshops were super fun and insightful.” – Student E</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <h2 class="section-title">Meet the Team</h2>
+    <p style="text-align:center">(Team bios & photos will go here)</p>
+  </section>
+
+  <section id="roadmaps">
+    <h2 class="section-title">Roadmaps</h2>
+    <p style="text-align:center">(Subjects, goals, and career path guides will be shown here)</p>
+  </section>
+
+  <section id="schools">
+    <h2 class="section-title">Schools We Visited</h2>
+    <p style="text-align:center">(Photos or list of local schools and workshops conducted)</p>
+  </section>
+
+  <section id="apply">
+  <h2 class="section-title">Apply / Volunteer</h2>
+  <form id="applyForm" style="max-width: 500px; margin: 0 auto">
+    <input type="text" id="name" placeholder="Your Name" autocomplete="on" required />
+    <small class="error" id="nameError"></small>
+
+    <input type="email" id="email" placeholder="Email Address" autocomplete="on" required />
+    <small class="error" id="emailError"></small>
+
+    <textarea id="message" placeholder="Why do you want to join?" rows="4" required></textarea>
+    <small class="error" id="messageError"></small>
+
+    <button class="cta-btn" type="submit">Submit</button>
+  </form>
+</section>
+
+  <section id="blog">
+    <h2 class="section-title">From Our Blog</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem">
+      <div style="background: var(--highlight); padding:1rem; border-radius: 8px; width: 250px;">(Blog Post 1)</div>
+      <div style="background: var(--highlight); padding:1rem; border-radius: 8px; width: 250px;">(Blog Post 2)</div>
+      <div style="background: var(--highlight); padding:1rem; border-radius: 8px; width: 250px;">(Blog Post 3)</div>
+    </div>
+  </section>
+
+  <section id="resources">
+    <h2 class="section-title">Resources & Downloads</h2>
+    <p style="text-align:center">(PDFs, guides, and toolkit links will be available here)</p>
+  </section>
+</section>
+
+<div id="footer"> </div>
+
+
+
+  <script>
+  document.getElementById("applyForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+     // stop form from submitting for now
+    let valid = true;
+
+    // Name validation
+    const name = document.getElementById("name");
+    const nameError = document.getElementById("nameError");
+    if (name.value.trim() === "") {
+      name.classList.add("invalid");
+      nameError.innerText = "Name is required.";
+      nameError.style.display = "block";
+      valid = false;
+    } else {
+      name.classList.remove("invalid");
+      nameError.style.display = "none";
+    }
+
+    // Email validation
+    const email = document.getElementById("email");
+    const emailError = document.getElementById("emailError");
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!email.value.match(emailPattern)) {
+      email.classList.add("invalid");
+      emailError.innerText = "Please enter a valid email address.";
+      emailError.style.display = "block";
+      valid = false;
+    } else {
+      email.classList.remove("invalid");
+      emailError.style.display = "none";
+    }
+
+    // Message validation
+    const message = document.getElementById("message");
+    const messageError = document.getElementById("messageError");
+    if (message.value.trim().length < 10) {
+      message.classList.add("invalid");
+      messageError.innerText = "Message should be at least 10 characters.";
+      messageError.style.display = "block";
+      valid = false;
+    } else {
+      message.classList.remove("invalid");
+      messageError.style.display = "none";
+    }
+
+    // If all fields valid
+    if (valid) {
+      alert("Form submitted successfully!");
+      // Here you can send data to backend, Google Forms, or Airtable
+      this.reset();
+    }
+  });
+</script>
+<script>
+const gallery = document.querySelector('.gallery');
+
+// Duplicate items to allow seamless scroll//
+gallery.innerHTML += gallery.innerHTML;
+
+gallery.addEventListener('scroll', () => {
+  if (gallery.scrollTop >= gallery.scrollHeight / 2) {
+    // Instead of jumping to top, subtract half scroll height
+    gallery.scrollTop -= gallery.scrollHeight / 2;
+  }
+});
+
+// Optional: Auto-scroll effect
+let scrollSpeed = 1; // pixels per frame
+function autoScroll() {
+  gallery.scrollTop += scrollSpeed;
+  if (gallery.scrollTop >= gallery.scrollHeight / 2) {
+    gallery.scrollTop -= gallery.scrollHeight / 2;
+  }
+  requestAnimationFrame(autoScroll);
+}
+autoScroll();
+</script>
+
+<script src="main.js"> </script>
+<script src="load-header.js"></script>
+<script src="load-footer.js"></script>
+</body>
+</html>

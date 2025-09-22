@@ -1,0 +1,302 @@
+@font-face {
+        font-family: Bricolage Grotesque;
+        src: "C:\Users\Saniya Aijaz\OneDrive\Documents\Ignitra\Bricolage_Grotesque,DM_Sans.zip";
+ }
+
+
+ section {
+      padding: 4rem 1.5rem 2rem;
+    }
+
+
+
+ .title h1{  
+    margin-top:5%;
+    width: 100%;
+    text-align: center;
+    color: #2f5233;
+    font-weight:800;
+      font-family: "Bricolage Grotesque", sans-serif ;
+}
+
+ h2{  
+    width: 100%;
+    text-align: center;
+    color: #2f5233;
+    font-weight:800;
+      font-family: "Bricolage Grotesque", sans-serif ;
+}
+
+.title p {
+    text-align: center;
+    color: #b4b4b4;
+
+}
+
+.snippets {
+    display: grid;
+    grid-template-columns: repeat(4,  100px) ;
+    text-decoration: none;
+    color: white;
+    justify-content: center;
+    margin-top: 4px;
+    width:100%;
+    height: 40px;
+    gap: 75px;
+    text-align: center;
+
+}
+.snippets > a{
+    text-decoration: none;
+    color: white;
+    background-color: #f1740f;
+    border-radius: 50px ;
+    width: 150px;
+    align-content: center;
+}
+
+
+.roadmap p { 
+     font-size: 1.2rem;
+      color: #b4b4b4 ;
+      margin-top: 0.75rem;
+      font-family: "DM Sans", sans-serif;
+}
+
+h3{
+    color: #2f5233;
+}
+.container{   
+        display: grid;
+        grid-template-rows:repeat(5,400px);
+        grid-template-columns:repeat(3,350px);
+        gap:75px;
+       margin-left: 10%;
+       margin-top:0%;
+       margin-bottom:   5%;
+       padding: 0;
+       align-content: center;
+
+    }
+
+
+.roadmap{
+    border-radius: 55px;
+    overflow: hidden;
+    align-content: center;
+    padding: 15px;
+}
+
+.roadmap-1 {
+    background-color: #FFE8D0;
+    grid-row: span 1;
+    grid-column: span 2;
+}
+
+.roadmap-2{
+    text-align: left;
+    grid-row: span 1;
+    grid-column: span 1;
+}
+
+.roadmap-3 p ,.roadmap-3  h3{ 
+    text-align: right;
+    grid-row: span 1;
+    grid-column: span 1;
+
+    
+}
+.roadmap-4 { 
+    background-color: #FFE8D0;
+    grid-row: span 1;
+    grid-column: span 2;
+}
+
+.roadmap-5 {
+    background-color: #FFE8D0;
+    grid-row: span 1;
+    grid-column: span 2;
+}
+.roadmap-6{ 
+    grid-row: span 1;
+    grid-column: span 1;
+}
+
+.roadmap-7 p, .roadmap-7 h3{ 
+    text-align: right;
+    grid-row: span 1;
+    grid-column: span 1;
+}
+
+.roadmap-8{ 
+    background-color: #FFE8D0;
+    grid-row: span 1;
+    grid-column: span 2;
+}
+
+.roadmap-9{ 
+     background-color: #FFE8D0;
+    grid-row: span 1;
+    grid-column: span 2;
+}
+
+.roadmap-10 .roadmap-10 h3    { 
+    text-align: right;
+    grid-row: span 1;
+    grid-column: span 1;
+}
+
+  section .cta-btn {
+      margin-top: 1.5rem;
+      background-color: #f1740f;
+      color: white;
+      border: none;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      height: 50px;
+      margin-left:44%;
+    }
+    section  .cta-btn:hover {
+      background-color: var(--secondary);
+      transform: scale(1.05);
+    }
+
+    .faq-container{
+        max-width: 800px;
+        margin: 2rem auto;
+    }
+
+    .faq-item {
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;     
+    border: 1px solid transparent;
+    transition: border 0.3s ease;
+    background-color: rgba(255, 232, 208, 0.4);
+    border: 1px solid transparent;
+    border-radius:10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2f5233;
+}
+
+.faq-question{
+  padding: 0.5rem 3rem o.5rem 1rem;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  align-items: center;
+}
+
+
+.faq-item:hover {
+  border: 1px solid #f1740f;
+}
+
+.faq-question::after{
+  content: "\25BE";
+  font-size: 2rem;
+  color: #2f5233;
+  position: absolute;
+  right: 1rem;
+  transition: transform 0.2 ease-in-out;
+
+}
+
+.faq-question.active::after{
+  transform: rotate(-180deg);
+}
+
+.faq-answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    
+} 
+
+.faq-answer > p{
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 3px solid #fcfaed ;
+}
+
+/* Responsive Roadmap Grid for smaller screens */
+@media (max-width: 768px) {
+
+   .container {
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows:  repeat(5, 150px);
+    gap: 30px; /* reduce gap for mobile */
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+.roadmap{
+    border-radius: 28px;
+    margin-left: 15px;
+}
+  .roadmap-1,
+  .roadmap-4,
+  .roadmap-5,
+  .roadmap-8,
+  .roadmap-9{
+    grid-column: span 2;
+  }
+
+   .roadmap-2,
+  .roadmap-3,
+  .roadmap-6,
+  .roadmap-7,
+  .roadmap-10{
+    grid-column: span 1;
+  }
+
+  .roadmap p {
+    display: none;
+
+  }
+
+  h3{
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+
+  .title { 
+    text-align: center;
+    margin-top: 60px;
+  }
+
+.snippets{
+    width: 100%;
+    gap: 5px;
+    padding: 10px;
+    height: 50px;
+}
+
+.snippets>a{
+    width: 90px;
+    font-size: x-small;
+    font-weight: bold;
+}
+.title p{
+    font-size: 0.5rem;
+    text-wrap: wrap;
+    margin: 10px 50px 10px 50px;
+}
+
+section .cta-btn{
+    margin-left: 30%;
+}
+ 
+.faq-question {
+    font-size: 0.9rem;
+    padding-right: 2.5rem;
+}
+
+.faq-question::after{
+  font-size: 2rem;
+}
+}
